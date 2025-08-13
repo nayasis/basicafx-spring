@@ -64,12 +64,17 @@ tasks.withType<JavaCompile> {
 }
 
 mavenPublishing {
-	signAllPublications()
+	// Skip signing for local Maven repository deployment
+	if (!gradle.startParameter.taskNames.any {
+		it.contains("publishToMavenLocal") || it.contains("publishMavenPublicationToMavenLocal")
+	}) {
+		signAllPublications()
+	}
 	publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 	pom {
 		name.set(rootProject.name)
-		description.set("Basic JavaFx library based on Kotlin")
-		url.set("https://github.com/nayasis/extension-javafx-spring-kt")
+		description.set("JavaFx Spring runner")
+		url.set("https://github.com/nayasis/basicafx-spring")
 		licenses {
 			license {
 				name.set("Apache License, Version 2.0")
@@ -84,9 +89,9 @@ mavenPublishing {
 			}
 		}
 		scm {
-			connection.set("scm:git:github.com/nayasis/extension-javafx-spring-kt.git")
-			developerConnection.set("scm:git:ssh://github.com/nayasis/extension-javafx-spring-kt.git")
-			url.set("https://github.com/nayasis/extension-javafx-spring-kt/tree/master")
+			connection.set("scm:git:github.com/nayasis/basicafx-spring.git")
+			developerConnection.set("scm:git:ssh://github.com/nayasis/basicafx-spring.git")
+			url.set("https://github.com/nayasis/basicafx-spring/tree/master")
 		}
 	}
 }

@@ -1,1 +1,1 @@
-rootProject.name = "extension-javafx-spring-kt"
+rootProject.name = "basicafx-spring"

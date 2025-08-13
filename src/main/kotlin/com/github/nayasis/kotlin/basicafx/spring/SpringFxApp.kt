@@ -1,4 +1,4 @@
-package com.github.nayasis.kotlin.extension.javafx.spring
+package com.github.nayasis.kotlin.basicafx.spring
 
 import com.github.nayasis.kotlin.basica.core.extension.ifEmpty
 import com.github.nayasis.kotlin.basica.etc.error
@@ -40,6 +40,7 @@ private val logger = KotlinLogging.logger {}
 
 private lateinit var ctx: ConfigurableApplicationContext
 
+@Suppress("unused")
 abstract class SpringFxApp: App {
 
     constructor(primaryView: KClass<out UIComponent> = NoPrimaryViewSpecified::class, vararg stylesheet: KClass<out Stylesheet>) : super(primaryView, *stylesheet)
@@ -126,7 +127,6 @@ abstract class SpringFxApp: App {
 
         fun loadMessage(resourcePath: String) = Messages.loadFromResource(resourcePath)
 
-        @Suppress("MemberVisibilityCanBePrivate")
         fun notifyPreloader(notificator: PreloaderNotification) {
             LauncherImpl.notifyPreloader(null,notificator)
         }
@@ -144,7 +144,6 @@ abstract class SpringFxApp: App {
         val context: ConfigurableApplicationContext
             get() = ctx
 
-        @Suppress("MemberVisibilityCanBePrivate")
         val environment: Environment
             get() = ctx.environment
 

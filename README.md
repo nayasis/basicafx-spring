@@ -1,8 +1,8 @@
-# JavaFx Spring extension
+# basicafx spring
 
-extension to use JavaFx in Spring
+JavaFx extension to run application in the Spring framework.
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.nayasis/extension-javafx-spring-kt.svg)](https://central.sonatype.com/artifact/io.github.nayasis/extension-javafx-spring-kt)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.nayasis/basicafx-spring.svg)](https://central.sonatype.com/artifact/io.github.nayasis/basicafx-spring)
 
 ## Dependency
 
@@ -10,7 +10,7 @@ extension to use JavaFx in Spring
 
 ```kotlin
 dependencies {
-    implementation("io.github.nayasis:extension-javafx-spring-kt:0.0.1")
+    implementation("io.github.nayasis:basicafx-spring:0.0.1")
 }
 ```
 
@@ -19,7 +19,7 @@ dependencies {
 ```xml
 <dependency>
     <groupId>io.github.nayasis</groupId>
-    <artifactId>extension-javafx-spring-kt</artifactId>
+    <artifactId>basicafx-spring</artifactId>
     <version>0.0.1</version>
 </dependency>
 ```

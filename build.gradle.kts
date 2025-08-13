@@ -29,7 +29,7 @@ javafx {
 }
 
 dependencies {
-	implementation("io.github.nayasis:basica-kt:0.3.5")
+	implementation("io.github.nayasis:basica-kt:0.3.6")
 	implementation("io.github.nayasis:basicafx-kt:0.2.3-SNAPSHOT")
 	implementation("no.tornado:tornadofx:1.7.20")
 	implementation("commons-cli:commons-cli:1.4")
